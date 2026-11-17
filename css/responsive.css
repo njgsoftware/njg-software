@@ -1,0 +1,695 @@
+
+/* =========================================================
+   NJG SOFTWARE — RESPONSIVE
+   Arquivo: css/responsive.css
+   ========================================================= */
+
+/* 01. DESKTOPS E NOTEBOOKS MENORES */
+
+@media (max-width: 1200px) {
+
+  :root {
+    --container-width: 1080px;
+  }
+
+  .hero-content {
+    gap: 35px;
+  }
+
+  .hero-title {
+    font-size: clamp(3.5rem, 6vw, 5.6rem);
+  }
+
+  .hero-visual {
+    min-height: 440px;
+  }
+
+  .advantages-layout {
+    gap: 65px;
+  }
+
+  .solution-card {
+    padding: 26px;
+  }
+
+  .footer-navigation {
+    gap: 65px;
+  }
+}
+
+/* 02. TABLETS E TELAS INTERMEDIÁRIAS */
+
+@media (max-width: 992px) {
+
+  :root {
+    --header-height: 76px;
+  }
+
+  .section {
+    padding: 100px 0;
+  }
+
+  .section-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 50px;
+  }
+
+  .section-description {
+    max-width: 550px;
+  }
+
+  /* Hero */
+
+  .hero {
+    min-height: auto;
+    padding-top: 160px;
+    padding-bottom: 100px;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .hero-copy {
+    max-width: 750px;
+  }
+
+  .hero-title {
+    font-size: clamp(3.5rem, 8vw, 6rem);
+  }
+
+  .hero-visual {
+    width: min(100%, 520px);
+    min-height: 440px;
+    margin-inline: auto;
+  }
+
+  .visual-frame {
+    max-width: 390px;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+  /* Soluções */
+
+  .solutions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .solution-card {
+    min-height: 360px;
+  }
+
+  .solution-card:last-child {
+    grid-column: 1 / -1;
+    min-height: 300px;
+  }
+
+  /* Diferenciais */
+
+  .advantages-layout {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .advantages-intro {
+    max-width: 700px;
+  }
+
+  /* Processo */
+
+  .process-timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 70px 35px;
+  }
+
+  .process-timeline::before,
+  .timeline-progress,
+  .process-step::before {
+    display: none;
+  }
+
+  .process-step {
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+  }
+
+  /* Footer */
+
+  .footer-navigation {
+    gap: 55px;
+  }
+}
+
+/* 03. MENU MOBILE E TABLETS PEQUENOS */
+
+@media (max-width: 768px) {
+
+  .container {
+    width: min(90%, 600px);
+  }
+
+  .section {
+    padding: 85px 0;
+  }
+
+  .section-title {
+    font-size: clamp(2.3rem, 8vw, 3.8rem);
+  }
+
+  .section-label {
+    font-size: 0.66rem;
+    margin-bottom: 19px;
+  }
+
+  .site-header {
+    height: var(--header-height);
+  }
+
+  .site-header.scrolled {
+    --header-height: 68px;
+  }
+
+  .brand-name {
+    font-size: 1.55rem;
+  }
+
+  .brand-detail {
+    font-size: 0.82rem;
+  }
+
+  /* Menu */
+
+  .menu-toggle {
+    display: flex;
+    position: relative;
+    z-index: 1002;
+  }
+
+  .menu-toggle span {
+    transform-origin: center;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 34px;
+
+    background: rgba(5, 5, 8, 0.98);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-15px);
+
+    transition:
+      opacity 0.35s ease,
+      visibility 0.35s ease,
+      transform 0.35s ease;
+
+    z-index: 1001;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+  }
+
+  .nav-cta {
+    font-size: 1.1rem;
+    padding: 14px 28px;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  /* Hero */
+
+  .hero {
+    padding-top: 145px;
+    padding-bottom: 85px;
+  }
+
+  .hero-content {
+    gap: 35px;
+  }
+
+  .hero-title {
+    font-size: clamp(3.1rem, 11vw, 5.2rem);
+    line-height: 1.02;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin-top: 25px;
+  }
+
+  .hero-actions {
+    margin-top: 30px;
+  }
+
+  .hero-visual {
+    min-height: auto;
+    aspect-ratio: 1;
+    max-width: 430px;
+  }
+
+  .visual-frame {
+    width: 82%;
+  }
+
+  .visual-label {
+    font-size: 0.52rem;
+  }
+
+  .hero-orb {
+    width: 330px;
+    height: 330px;
+    filter: blur(90px);
+  }
+
+  /* Manifesto */
+
+  .manifesto-title {
+    font-size: clamp(2.5rem, 8vw, 4.3rem);
+  }
+
+  .manifesto-description {
+    font-size: 1rem;
+    margin-top: 25px;
+  }
+
+  /* Soluções */
+
+  .solutions-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .solution-card,
+  .solution-card:last-child {
+    grid-column: auto;
+    min-height: 310px;
+  }
+
+  .solution-card {
+    gap: 42px;
+  }
+
+  .section-bottom {
+    justify-content: flex-start;
+  }
+
+  /* Processo */
+
+  .process-timeline {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 50px;
+    padding-top: 0;
+  }
+
+  .process-step {
+    padding-top: 25px;
+  }
+
+  .process-step h3 {
+    margin-top: 15px;
+  }
+
+  /* CTA */
+
+  .cta-title {
+    font-size: clamp(2.8rem, 10vw, 5rem);
+  }
+
+  .cta-description {
+    font-size: 1rem;
+  }
+
+  /* Footer */
+
+  .footer-main {
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 60px;
+  }
+
+  .footer-navigation {
+    width: 100%;
+    justify-content: space-between;
+    gap: 25px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* 04. SMARTPHONES */
+
+@media (max-width: 480px) {
+
+  .container {
+    width: 90%;
+  }
+
+  .section {
+    padding: 75px 0;
+  }
+
+  /* Header */
+
+  .brand-name {
+    font-size: 1.45rem;
+  }
+
+  /* Hero */
+
+  .hero {
+    padding-top: 125px;
+    padding-bottom: 70px;
+  }
+
+  .eyebrow {
+    font-size: 0.58rem;
+    letter-spacing: 0.09em;
+  }
+
+  .hero-title {
+    font-size: clamp(2.8rem, 12vw, 4rem);
+    letter-spacing: -0.065em;
+  }
+
+  .hero-description {
+    font-size: 0.96rem;
+    line-height: 1.75;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .btn {
+    width: 100%;
+    min-height: 54px;
+    font-size: 0.88rem;
+    padding: 15px 20px;
+  }
+
+  .hero-visual {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .visual-frame {
+    width: 85%;
+    border-radius: 24px;
+  }
+
+  .visual-frame-inner {
+    border-radius: 23px;
+    padding: 12px;
+  }
+
+  .visual-label-top {
+    top: 0;
+  }
+
+  .visual-label-bottom {
+    bottom: 0;
+  }
+
+  /* Títulos */
+
+  .section-title {
+    font-size: clamp(2.1rem, 9vw, 3rem);
+  }
+
+  .manifesto-title {
+    font-size: clamp(2.3rem, 9.5vw, 3.5rem);
+  }
+
+  /* Cards */
+
+  .solution-card,
+  .solution-card:last-child {
+    padding: 26px;
+    min-height: 305px;
+  }
+
+  .card-content h3 {
+    font-size: 1.42rem;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+  }
+
+  /* Diferenciais */
+
+  .advantage-item {
+    grid-template-columns: 25px 1fr;
+    gap: 14px;
+    padding: 26px 0;
+  }
+
+  .advantage-arrow {
+    display: none;
+  }
+
+  .advantage-item h3 {
+    font-size: 1.08rem;
+  }
+
+  /* CTA */
+
+  .cta-title {
+    font-size: clamp(2.5rem, 11vw, 3.6rem);
+  }
+
+  /* Footer */
+
+  .footer-navigation {
+    flex-wrap: wrap;
+    gap: 35px;
+  }
+
+  .footer-column {
+    min-width: 120px;
+  }
+
+  .footer-bottom {
+    font-size: 0.65rem;
+  }
+}
+
+/* 05. SMARTPHONES MUITO PEQUENOS */
+
+@media (max-width: 360px) {
+
+  .hero-title {
+    font-size: 2.65rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .hero-visual {
+    max-width: 290px;
+  }
+
+  .visual-label {
+    display: none;
+  }
+
+  .footer-navigation {
+    flex-direction: column;
+  }
+}
+
+/* 06. DISPOSITIVOS SEM HOVER */
+
+@media (hover: none) {
+
+  .cursor-glow {
+    display: none;
+  }
+
+  .solution-card:hover {
+    transform: none;
+  }
+
+  .advantage-item:hover {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .btn:hover {
+    transform: none;
+  }
+}
+
+/* 07. AJUSTES DE ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .nav-links,
+  .menu-toggle span {
+    transition: none;
+  }
+
+  .hero-orb,
+  .visual-frame,
+  .visual-glow {
+    animation: none;
+  }
+}
+
+/* 08. SEGURANÇA CONTRA OVERFLOW */
+
+.hero-title,
+.section-title,
+.manifesto-title,
+.cta-title,
+.card-content h3 {
+  overflow-wrap: break-word;
+}
+
+html,
+body {
+  max-width: 100%;
+}
+
+
+/* 09. MENU MOBILE — AJUSTE DE CAMADAS */
+
+@media (max-width: 768px) {
+
+  .site-header {
+    isolation: isolate;
+  }
+
+  .nav-links {
+    position: fixed;
+    inset: 0;
+    top: 0;
+    width: 100%;
+    height: 100dvh;
+    z-index: 1001;
+  }
+
+  .menu-toggle {
+    z-index: 1003;
+  }
+
+  /* Mantém o botão visível quando o menu abre */
+  .menu-toggle.active {
+    position: relative;
+  }
+}
+
+
+/* 10. CORREÇÃO FINAL DO MENU MOBILE */
+
+@media (max-width: 768px) {
+
+  .site-header {
+    isolation: auto;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: calc(100dvh - var(--header-height));
+
+    z-index: 1001;
+
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    background: rgba(5, 5, 8, 0.98);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+
+  .menu-toggle {
+    position: relative;
+    z-index: 1003;
+  }
+}
+
+
+/* AUDITORIA — NAVEGAÇÃO MOBILE */
+
+@media (max-width: 768px) {
+
+  .site-header {
+    --current-header-height: var(--header-height);
+  }
+
+  .site-header .nav-links {
+    top: 100%;
+    height: calc(100dvh - var(--current-header-height));
+    max-height: calc(100dvh - var(--current-header-height));
+  }
+
+  .site-header.scrolled .nav-links {
+    height: calc(100dvh - var(--header-height));
+    max-height: calc(100dvh - var(--header-height));
+  }
+
+  .nav-links.open {
+    overflow-y: auto;
+  }
+
+}

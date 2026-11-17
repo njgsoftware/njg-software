@@ -1,0 +1,6 @@
+
+# NJG Software
+# Configuracao de rastreamento
+
+User-agent: *
+Allow: /

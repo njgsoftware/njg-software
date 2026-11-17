@@ -1,0 +1,410 @@
+
+/* =========================================================
+   NJG SOFTWARE — ANIMATIONS
+   Arquivo: css/animations.css
+   ========================================================= */
+
+/* 01. REVEAL ON SCROLL */
+
+/*
+  Os elementos permanecem visíveis por padrão.
+  O JavaScript adicionará .js-motion-ready quando
+  estiver pronto para controlar as animações.
+*/
+
+.js-motion-ready .reveal {
+  opacity: 0;
+  transform: translateY(36px);
+
+  transition:
+    opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.js-motion-ready .reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Atrasos de entrada */
+
+.js-motion-ready .hero-copy .reveal:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.js-motion-ready .hero-copy .reveal:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.js-motion-ready .hero-copy .reveal:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+/* 02. FLUTUAÇÃO DA LOGO */
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+.visual-frame {
+  animation: logoFloat 7s ease-in-out infinite;
+}
+
+/* 03. MOVIMENTO DOS ORBS */
+
+@keyframes orbFloatOne {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-55px, 45px) scale(1.12);
+  }
+}
+
+@keyframes orbFloatTwo {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(65px, -40px) scale(1.15);
+  }
+}
+
+.hero-orb-one {
+  animation: orbFloatOne 18s ease-in-out infinite;
+}
+
+.hero-orb-two {
+  animation: orbFloatTwo 22s ease-in-out infinite;
+}
+
+/* 04. BRILHO DA LOGO */
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.75;
+    transform: scale(1.08);
+  }
+}
+
+.visual-glow {
+  animation: glowPulse 8s ease-in-out infinite;
+}
+
+/* 05. BOTÕES */
+
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -130%;
+  width: 70%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+
+  transform: skewX(-25deg);
+  transition: left 0.75s ease;
+  pointer-events: none;
+}
+
+.btn-primary:hover::before {
+  left: 150%;
+}
+
+.btn span {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover span {
+  transform: translate(3px, -3px);
+}
+
+/* 06. CARDS INTERATIVOS */
+
+.solution-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.solution-card .card-content,
+.solution-card .card-top,
+.solution-card .card-tag {
+  transition: transform 0.4s ease;
+}
+
+.solution-card:hover .card-top {
+  transform: translateY(-3px);
+}
+
+.solution-card:hover .card-content {
+  transform: translateY(-5px);
+}
+
+.solution-card:hover .card-tag {
+  transform: translateY(-2px);
+}
+
+/* 07. DIFERENCIAIS */
+
+.advantage-item {
+  transition:
+    padding 0.35s ease,
+    background 0.35s ease;
+}
+
+.advantage-item:hover {
+  padding-left: 12px;
+  padding-right: 12px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(139, 39, 255, 0.06),
+    transparent
+  );
+}
+
+.advantage-arrow {
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.advantage-item:hover .advantage-arrow {
+  transform: translate(4px, -4px);
+  color: #bc98ff;
+}
+
+/* 08. LINHA DO PROCESSO */
+
+.timeline-progress {
+  transition: width 0.15s linear;
+  box-shadow: 0 0 15px rgba(139, 39, 255, 0.35);
+}
+
+.process-step::before {
+  transition:
+    background 0.4s ease,
+    box-shadow 0.4s ease,
+    transform 0.4s ease;
+}
+
+.process-step.active::before {
+  background: #d600f5;
+  box-shadow:
+    0 0 15px rgba(214, 0, 245, 0.5),
+    0 0 30px rgba(139, 39, 255, 0.3);
+
+  transform: scale(1.25);
+}
+
+/* 09. SCROLL INDICATOR */
+
+@keyframes scrollLine {
+  0% {
+    opacity: 0.2;
+    transform: scaleY(0.5);
+    transform-origin: top;
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+
+  100% {
+    opacity: 0.2;
+    transform: scaleY(0.5);
+    transform-origin: top;
+  }
+}
+
+.scroll-line {
+  animation: scrollLine 2.5s ease-in-out infinite;
+}
+
+/* 10. STATUS DOT */
+
+@keyframes statusPulse {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(174, 101, 255, 0.4);
+  }
+
+  50% {
+    box-shadow:
+      0 0 12px rgba(174, 101, 255, 0.9),
+      0 0 22px rgba(139, 39, 255, 0.5);
+  }
+}
+
+.status-dot {
+  animation: statusPulse 2.8s ease-in-out infinite;
+}
+
+/* 11. GRADIENTE VIVO */
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.hero-title .gradient-text,
+.cta-title .gradient-text {
+  background-size: 200% 200%;
+  animation: gradientShift 9s ease-in-out infinite;
+}
+
+/* 12. MENU */
+
+.nav-link {
+  position: relative;
+}
+
+.nav-links .nav-link:not(.nav-cta)::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  left: 0;
+  bottom: -7px;
+  width: 0;
+
+  background: var(--gradient-primary);
+  transition: width 0.3s ease;
+}
+
+.nav-links .nav-link:not(.nav-cta):hover::after,
+.nav-links .nav-link.active:not(.nav-cta)::after {
+  width: 100%;
+}
+
+/* 13. CURSOR GLOW */
+
+.cursor-glow {
+  transition: opacity 0.35s ease;
+}
+
+/* 14. ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .js-motion-ready .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .solution-card {
+    transform: none !important;
+  }
+
+  .cursor-glow {
+    display: none !important;
+  }
+}
+
+
+/* 15. REFINAMENTO DOS CARDS 3D */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .js-motion-ready .solution-card.visible {
+    transition:
+      opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.25s ease-out,
+      border-color 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+
+}
+
+/* Otimização das animações */
+
+.hero-orb,
+.visual-glow {
+  pointer-events: none;
+}
+
+#particles-canvas {
+  pointer-events: none;
+}
+
+
+/* REFINAMENTO DAS SEÇÕES INTERNAS */
+
+.js-motion-ready .service-feature.reveal.visible,
+.js-motion-ready .benefit-card.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-feature-visual {
+  transform: translateZ(0);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .js-motion-ready .benefit-card.reveal.visible:hover {
+    transform: translateY(-5px);
+  }
+}
+
+
+/* AUDITORIA — INTERAÇÕES 3D */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .js-motion-ready .solution-card.reveal.visible {
+    transition:
+      opacity 0.85s ease,
+      transform 0.18s ease-out,
+      border-color 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .timeline-progress {
+    transition: none !important;
+  }
+
+}

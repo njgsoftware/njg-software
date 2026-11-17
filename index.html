@@ -1,0 +1,584 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#050505">
+  
+  <!-- SEO PRINCIPAL -->
+  <title>Criação de Sites Profissionais | NJG Software</title>
+
+  <meta
+    name="description"
+    content="Criação de sites institucionais modernos e responsivos para empresas. Valorize sua marca, apresente seus serviços e facilite o contato com clientes."
+  >
+
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="NJG Software">
+
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website">
+
+  <meta
+    property="og:locale"
+    content="pt_BR"
+  >
+
+  <meta
+    property="og:site_name"
+    content="NJG Software"
+  >
+
+  <meta
+    property="og:title"
+    content="NJG Software | Criação de Sites Profissionais"
+  >
+
+  <meta
+    property="og:description"
+    content="Desenvolvemos sites modernos, interativos e profissionais que valorizam sua marca e aproximam sua empresa de novos clientes."
+  >
+
+  <!-- TWITTER / X -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta
+    name="twitter:title"
+    content="NJG Software | Criação de Sites Profissionais"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Sites institucionais modernos e profissionais para empresas que querem fortalecer sua presença digital."
+  >
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/images/njg-logo.png" type="image/png">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- JavaScript -->
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ELEMENTOS VISUAIS GLOBAIS -->
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <nav class="navbar container" aria-label="Navegação principal">
+
+      <a href="index.html" class="brand" aria-label="NJG Software - Início">
+        <span class="brand-name">NJG</span>
+        <span class="brand-detail">Software</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="index.html" class="nav-link active" aria-current="page">Início</a>
+        <a href="sobre.html" class="nav-link">Sobre</a>
+        <a href="servicos.html" class="nav-link">Soluções</a>
+        <a href="contato.html" class="nav-link nav-cta">
+          Iniciar projeto
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero section" id="inicio">
+
+      <div class="hero-background" aria-hidden="true">
+        <div class="hero-orb hero-orb-one"></div>
+        <div class="hero-orb hero-orb-two"></div>
+        <div class="hero-grid"></div>
+        <canvas id="particles-canvas"></canvas>
+      </div>
+
+      <div class="container hero-content">
+
+        <div class="hero-copy">
+
+          <span class="eyebrow reveal">
+            <span class="status-dot"></span>
+            SOFTWARE & EXPERIÊNCIAS DIGITAIS
+          </span>
+
+          <h1 class="hero-title reveal">
+            Seu negócio merece
+            <span class="gradient-text">ser visto.</span>
+            <span class="sr-only">
+              Criação de sites institucionais profissionais
+              para empresas.
+            </span>
+          </h1>
+
+          <p class="hero-description reveal">
+              Desenvolvemos sites institucionais modernos,
+              rápidos e interativos que valorizam sua marca,
+              apresentam seus serviços e facilitam o contato
+              da sua empresa com novos clientes.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a href="contato.html" class="btn btn-primary">
+              Vamos criar seu site
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a href="#solucoes" class="btn btn-secondary">
+              Explore nossas soluções
+              <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="visual-glow"></div>
+
+          <div class="visual-frame">
+            <div class="visual-frame-inner">
+              <img
+                src="./assets/images/njg-logo.png"
+                alt=""
+                class="hero-logo"
+                width="2000"
+                height="2000"
+                fetchpriority="high"
+              >
+            </div>
+          </div>
+
+          <span class="visual-label visual-label-top">
+            BUILT FOR THE FUTURE
+          </span>
+
+          <span class="visual-label visual-label-bottom">
+            NJG / DIGITAL EXPERIENCES
+          </span>
+        </div>
+
+      </div>
+
+      <a href="#manifesto" class="scroll-indicator" aria-label="Rolar para conhecer a NJG Software">
+        <span>SCROLL TO EXPLORE</span>
+        <span class="scroll-line" aria-hidden="true"></span>
+      </a>
+
+    </section>
+
+    <!-- MANIFESTO -->
+    <section class="manifesto section" id="manifesto">
+
+      <div class="container manifesto-container">
+
+        <span class="section-label reveal">
+          01 / O NOVO DIGITAL
+        </span>
+
+        <h2 class="manifesto-title reveal">
+          A primeira impressão
+          não acontece mais
+          <span class="text-muted">na sua empresa.</span>
+          <span class="gradient-text">Acontece online.</span>
+        </h2>
+
+        <p class="manifesto-description reveal">
+          Antes de entrar em contato, seus futuros clientes
+          pesquisam, comparam e criam expectativas.
+          Sua presença digital precisa transmitir a
+          confiança que seu negócio merece.
+        </p>
+
+        <a href="sobre.html" class="text-link reveal">
+          Conheça a NJG Software
+          <span aria-hidden="true">↗</span>
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- SOLUÇÕES -->
+    <section class="solutions section" id="solucoes">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-label">02 / O QUE FAZEMOS</span>
+
+            <h2 class="section-title">
+              Tecnologia com
+              <span class="gradient-text">propósito.</span>
+            </h2>
+          </div>
+
+          <p class="section-description">
+            Soluções digitais para fortalecer sua marca,
+            transmitir credibilidade e facilitar novas
+            oportunidades de negócio.
+          </p>
+        </div>
+
+        <div class="solutions-grid">
+
+          <article class="solution-card reveal" data-tilt>
+            <div class="card-top">
+              <span class="card-number">01</span>
+              <span class="card-symbol" aria-hidden="true">↗</span>
+            </div>
+
+            <div class="card-content">
+              <h3>Sites institucionais</h3>
+
+              <p>
+                Sites modernos, responsivos e rápidos,
+                projetados para apresentar sua empresa
+                com profissionalismo e transformar
+                visitantes em oportunidades de contato.
+              </p>
+            </div>
+
+            <span class="card-tag">WEB DEVELOPMENT</span>
+          </article>
+
+          
+          <article class="solution-card reveal" data-tilt>
+            <div class="card-top">
+              <span class="card-number">02</span>
+              <span class="card-symbol" aria-hidden="true">✦</span>
+            </div>
+
+            <div class="card-content">
+              <h3>Experiências interativas</h3>
+
+              <p>
+                Criamos interfaces dinâmicas, animações
+                e experiências visuais envolventes que
+                valorizam sua marca e tornam a navegação
+                mais interessante para seus visitantes.
+              </p>
+            </div>
+
+            <span class="card-tag">INTERACTIVE WEB EXPERIENCES</span>
+          </article>
+
+
+          <article class="solution-card reveal" data-tilt>
+            <div class="card-top">
+              <span class="card-number">03</span>
+              <span class="card-symbol" aria-hidden="true">◎</span>
+            </div>
+
+            <div class="card-content">
+              <h3>Hospedagem gerenciada</h3>
+
+              <p>
+                Cuidamos da hospedagem e da
+                infraestrutura técnica do seu site
+                para que você possa concentrar
+                sua atenção no próprio negócio.
+              </p>
+            </div>
+
+            <span class="card-tag">MANAGED HOSTING</span>
+          </article>
+
+        </div>
+
+        <div class="section-bottom reveal">
+          <a href="servicos.html" class="text-link">
+            Conheça todas as soluções
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="advantages section" id="diferenciais">
+
+      <div class="container advantages-layout">
+
+        <div class="advantages-intro reveal">
+
+          <span class="section-label">
+            03 / NOSSA ABORDAGEM
+          </span>
+
+          <h2 class="section-title">
+            Menos complicação.
+            <span class="gradient-text">
+              Mais resultado.
+            </span>
+          </h2>
+
+          <p class="section-description">
+            A tecnologia deve facilitar o crescimento
+            da sua empresa, não criar novos problemas.
+          </p>
+
+        </div>
+
+        <div class="advantages-list">
+
+          <article class="advantage-item reveal">
+            <span class="advantage-number">01</span>
+
+            <div>
+              <h3>Performance desde o início.</h3>
+              <p>
+                Desenvolvemos pensando em velocidade,
+                responsividade e experiência do usuário.
+              </p>
+            </div>
+
+            <span class="advantage-arrow" aria-hidden="true">↗</span>
+          </article>
+
+          <article class="advantage-item reveal">
+            <span class="advantage-number">02</span>
+
+            <div>
+              <h3>Inteligência aplicada.</h3>
+              <p>
+                Utilizamos IA para tornar o desenvolvimento
+                mais eficiente, mantendo a atenção aos
+                detalhes técnicos.
+              </p>
+            </div>
+
+            <span class="advantage-arrow" aria-hidden="true">↗</span>
+          </article>
+
+          <article class="advantage-item reveal">
+            <span class="advantage-number">03</span>
+
+            <div>
+              <h3>Foco no seu negócio.</h3>
+              <p>
+                Criamos experiências que apresentam
+                seus serviços de forma clara e reforçam
+                a identidade da sua empresa.
+              </p>
+            </div>
+
+            <span class="advantage-arrow" aria-hidden="true">↗</span>
+          </article>
+
+          <article class="advantage-item reveal">
+            <span class="advantage-number">04</span>
+
+            <div>
+              <h3>Simplicidade e transparência.</h3>
+              <p>
+                Comunicação direta, escopo definido
+                e uma solução digital sem complicações
+                desnecessárias.
+              </p>
+            </div>
+
+            <span class="advantage-arrow" aria-hidden="true">↗</span>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PROCESSO -->
+    <section class="process section" id="processo">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-label">04 / NOSSO PROCESSO</span>
+
+            <h2 class="section-title">
+              Da ideia à
+              <span class="gradient-text">realidade.</span>
+            </h2>
+          </div>
+
+          <p class="section-description">
+            Um processo objetivo para transformar
+            suas necessidades em uma presença
+            digital profissional.
+          </p>
+        </div>
+
+        <div class="process-timeline">
+
+          <div class="timeline-progress" aria-hidden="true"></div>
+
+          <article class="process-step reveal">
+            <span class="step-number">01</span>
+            <h3>Descoberta</h3>
+            <p>
+              Entendemos seu negócio, seus objetivos
+              e o público que você deseja alcançar.
+            </p>
+          </article>
+
+          <article class="process-step reveal">
+            <span class="step-number">02</span>
+            <h3>Planejamento</h3>
+            <p>
+              Organizamos a estrutura, o conteúdo
+              e a direção visual do projeto.
+            </p>
+          </article>
+
+          <article class="process-step reveal">
+            <span class="step-number">03</span>
+            <h3>Desenvolvimento</h3>
+            <p>
+              Construímos seu site utilizando
+              boas práticas e ferramentas modernas,
+              incluindo IA.
+            </p>
+          </article>
+
+          <article class="process-step reveal">
+            <span class="step-number">04</span>
+            <h3>Lançamento</h3>
+            <p>
+              Testamos, ajustamos e publicamos
+              seu site para que sua empresa
+              esteja pronta para ser encontrada.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CHAMADA FINAL -->
+    <section class="final-cta section" id="iniciar-projeto">
+
+      <div class="cta-background" aria-hidden="true">
+        <div class="cta-glow"></div>
+      </div>
+
+      <div class="container cta-content">
+
+        <span class="section-label reveal">
+          05 / O PRÓXIMO PASSO
+        </span>
+
+        <h2 class="cta-title reveal">
+          Seu próximo cliente
+          pode estar a
+          <span class="gradient-text">
+            um clique.
+          </span>
+        </h2>
+
+        <p class="cta-description reveal">
+          Sua empresa tem uma história para contar.
+          Vamos construir a presença digital
+          que ela merece.
+        </p>
+
+        <a href="contato.html" class="btn btn-primary reveal">
+          Vamos conversar sobre seu projeto
+          <span aria-hidden="true">↗</span>
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-main">
+
+        <div class="footer-brand">
+          <a href="index.html" class="brand" aria-label="NJG Software - Início">
+            <span class="brand-name">NJG</span>
+            <span class="brand-detail">Software</span>
+          </a>
+
+          <p>
+            Criamos experiências digitais
+            para empresas que pensam no futuro.
+          </p>
+        </div>
+
+        <div class="footer-navigation">
+          <div class="footer-column">
+            <h3>Explorar</h3>
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre nós</a>
+            <a href="servicos.html">Soluções</a>
+          </div>
+
+          <div class="footer-column">
+            <h3>Vamos conversar</h3>
+            <a href="contato.html">Iniciar um projeto</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>
+          © <span id="current-year">2026</span> NJG Software.
+          Todos os direitos reservados.
+        </span>
+
+        <span>
+          ENGINEERED FOR WHAT'S NEXT.
+        </span>
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
